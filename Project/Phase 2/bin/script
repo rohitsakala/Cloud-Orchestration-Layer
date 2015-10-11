@@ -1,0 +1,1 @@
+python ../src/vm_01.py ../src/pm_file ../src/image_file ../src/flavor_file

@@ -1,0 +1,9 @@
+sudo -E pip install flask-mongoengine
+sudo -E pip install pymongo==2.8
+sudo apt-get install flask
+sudo -E apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+sudo apt-get update 
+sudo apt-get install -y mongodb-org
+sudo service mongod start
+python ../src/vm_01.py ../src/pm_file ../src/image_file ../src/flavor_file

@@ -1,0 +1,5 @@
+[ceph_deploy.cli][INFO  ] Invoked (1.4.0): /usr/bin/ceph-deploy install ceph-client
+[ceph_deploy.install][DEBUG ] Installing stable version emperor on cluster ceph hosts ceph-client
+[ceph_deploy.install][DEBUG ] Detecting platform for host ceph-client ...
+[ceph_deploy][ERROR ] RuntimeError: connecting to host: ceph-client resulted in errors: HostNotFound ceph-client
+

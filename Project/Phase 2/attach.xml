@@ -1,0 +1,6 @@
+<disk type='network' device='disk'>
+	<source protocol='rbd' name='image_name'>
+		<host name='hostName' port='6789'/>
+	</source>
+	<target dev='hdg' bus='virtio'/>
+</disk>
