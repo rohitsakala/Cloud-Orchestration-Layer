@@ -31,7 +31,7 @@ pm_next = 0
 
 @app.route('/')
 def index():
-	return render_template('index.html')
+	return "201356204"
 
 @app.route('/vm/create')
 def create():
@@ -117,6 +117,7 @@ def destroy():
 		        try:
 				domains.destroy()
 				connection.close()
+				vm_data.delete()
 			        return jsonify(status=1)
 		        except:
 		        	connection.close()

@@ -46,12 +46,12 @@ pool_name = 'first'
 BLOCK_CONFIG_XML = './attach.xml'
 
 #### Connection ####
-radosConnection = rados.Rados(conffile='/etc/ceph/ceph.conf')
-radosConnection.connect()
-if pool_name not in radosConnection.list_pools():                                
-	radosConnection.create_pool(pool_name)
-ioctx = radosConnection.open_ioctx(pool_name)
-rbdInstance = rbd.RBD()
+#radosConnection = rados.Rados(conffile='/etc/ceph/ceph.conf')
+#radosConnection.connect()
+#if pool_name not in radosConnection.list_pools():                                
+#	radosConnection.create_pool(pool_name)
+ioctx = ""#= radosConnection.open_ioctx(pool_name)
+rbdInstance = ""#= rbd.RBD()
 
 @app.route('/')
 def index():
@@ -179,7 +179,8 @@ def destroy():
 		        try:
 				domains.destroy()
 				connection.close()
-			        return jsonify(status=1)
+				vm_data.delete()
+				return jsonify(status=1)
 		        except:
 		        	connection.close()
 				return jsonify(status=0)
